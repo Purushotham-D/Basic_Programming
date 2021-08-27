@@ -1,0 +1,20 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Jul 28 11:40:41 2021
+
+@author: PURUBOI
+"""
+
+def armStrong(n):
+    temp=n
+    res=0
+    while n:
+        rem=n%10
+        n//=10
+        res+=rem**3
+    return temp==res
+
+
+for i in range(1000):
+    if armStrong(i):
+        print(i)
